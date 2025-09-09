@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <title>نمو</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/app-preview.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Scripts -->
+    <script src="js/header.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/faq.js" defer></script>
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/form-handler.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="القائمة">
+                    <span></span>
+                </button>
+                <a href="/" class="nav__logo">
+                    <img src="assets/app_logo.png" alt="نمو" width="120">
+                </a>
+                
+                <div class="nav__mobile-menu">
+                    <a href="#features" class="nav__link">عن نمو</a>
+                    <a href="#features" class="nav__link">مميزاتنا</a>
+                    <a href="#faq" class="nav__link">الأسئلة الشائعة</a>
+                </div>
+
+                <ul class="nav__menu">
+                    <li class="nav__item">
+                        <a href="#features" class="nav__link">عن نمو</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#features" class="nav__link">مميزاتنا</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#faq" class="nav__link">الأسئلة الشائعة</a>
+                    </li>
+                </ul>
+                
+                <a href="#contact" class="btn btn--download">ابدأ الآن</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <span class="hero__welcome">حياك في  نمو 👋</span>
+                        <h1 class="hero__title">
+                            <span class="color-primary">نمو   </span><span class="color-secondary">يختصر لك شهور!</span>
+                        </h1>
+                        <p class="hero__description">
+                            فكرتك تبدأ اليوم… وتتحول لمنصة رقمية كاملة في أقل من شهر.
+                        </p>
+                        <a href="#contact" class="btn btn--hero btn--large">
+                            ابدأ الآن 🚀
+                        </a>
+                    </div>
+                    <div class="hero__image">
+                        <img src="assets/mockk.png" alt="تطبيق نمو" class="hero__app-preview">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="app-preview" class="app-preview">
+            <div class="app-preview__container">
+                <img src="assets/app_logo.png" alt="نمو" class="app-preview__logo">
+                <h2 class="app-preview__title">
+                    <div class="app-preview__line">
+                        <span>نمو</span><span class="color-secondary">لأن</span><span class="color-primary">الوقت</span>
+                    </div>
+                    <div class="app-preview__line">
+                        <span class="color-primary">هو</span><span class="color-secondary">الأهم</span>
+                    </div>
+                </h2>
+                
+                <div class="app-preview__content">
+                    <div class="app-preview__cards">
+                        <img src="assets/app-card.png" alt="نمو - بطاقة 1" class="app-preview__card">
+                        <img src="assets/appcard2.png" alt="نمو - بطاقة 2" class="app-preview__card">
+                        <img src="assets/appcard3.png" alt="نمو - بطاقة 3" class="app-preview__card">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact__container">
+                <div class="contact__header">
+                    <div class="contact__title-wrapper">
+                        <h2 class="contact__title">انمو مع <span>نمو</span></h2>
+                        <lottie-player
+                            src="lottie/making_money.json"
+                            background="transparent"
+                            speed="1"
+                            class="contact__lottie"
+                            loop
+                            autoplay
+                        ></lottie-player>
+                    </div>
+                    <p class="contact__description">
+                        أخبرنا عن فكرة مشروعك وسنتواصل معك لتخصيص عرض مناسب لك  
+                    </p>
+                </div>
+                <form class="contact__form" id="contactForm">
+                    <div class="form__group">
+                        <label class="form__label" for="name">
+                            <img src="icons/user.png" alt="" class="form__label-icon">
+                            الاسم
+                        </label>
+                        <input type="text" id="name" class="form__input" placeholder="الاسم الكامل" required>
+                        <div class="form__error" id="nameError">الاسم غير صحيح</div>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="description">
+                            <img src="icons/start-up.png" alt="" class="form__label-icon">
+                            وصف المشروع
+                        </label>
+                        <textarea id="description" class="form__input form__textarea" 
+                            placeholder="اخبرنا عن فكرة مشروعك وكيف يمكننا مساعدتك..." required></textarea>
+                        <div class="form__error" id="descriptionError">وصف المشروع مطلوب</div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label class="form__label" for="phone">
+                                <img src="icons/phones.png" alt="" class="form__label-icon">
+                                رقم الجوال
+                            </label>
+                            <input type="tel" id="phone" class="form__input" placeholder="05xxxxxxxx" required>
+                            <div class="form__error" id="phoneError">رقم الجوال غير صحيح</div>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="email">
+                                <img src="icons/salary.png" alt="" class="form__label-icon">
+                                البريد الإلكتروني
+                            </label>
+                            <input type="email" id="email" class="form__input" placeholder="email@example.com" required>
+                            <div class="form__error" id="emailError">البريد الإلكتروني غير صحيح</div>
+                        </div>
+                    </div>
+                    <button type="submit" class="form__button">
+                        أرسل الطلب
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="faq__container">
+                <div class="faq__header">
+                    <h2 class="faq__title">الأسئلة <span>الشائعة</span></h2>
+                </div>
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <div class="faq__question">كيف يمكنني البدء مع نمو؟</div>
+                        <div class="faq__answer">
+                            يمكنك البدء مع نمو بكل سهولة من خلال تعبئة نموذج التواصل أعلاه. سيقوم فريقنا بالتواصل معك خلال 24 ساعة لمناقشة تفاصيل مشروعك وتقديم العرض المناسب.
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__question">كم المدة المتوقعة لإنجاز المشروع؟</div>
+                        <div class="faq__answer">
+                            نحن نفخر بسرعة إنجازنا - يمكننا تحويل فكرتك إلى منصة رقمية متكاملة خلال أقل من شهر فقط، مع الحفاظ على أعلى معايير الجودة.
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__question">هل يمكنني تخصيص المنصة حسب احتياجاتي؟</div>
+                        <div class="faq__answer">
+                            نعم، نحن نقدم حلولاً مخصصة بالكامل تناسب احتياجات مشروعك. يمكنك تحديد جميع المتطلبات والمميزات التي تحتاجها في منصتك.
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__question">ما هي تكلفة إنشاء المنصة؟</div>
+                        <div class="faq__answer">
+                            تختلف التكلفة حسب متطلبات المشروع. نحن نقدم أسعاراً تنافسية مع ضمان أعلى جودة. تواصل معنا لنقدم لك عرض سعر مفصل يناسب مشروعك.
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__question">هل تقدمون خدمات الدعم الفني بعد إطلاق المنصة؟</div>
+                        <div class="faq__answer">
+                            نعم، نحن نقدم خدمات الدعم الفني المستمر لضمان عمل منصتك بكفاءة. نوفر حلولاً سريعة لأي مشكلة قد تواجهها.
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__question">هل يمكنني تطوير المنصة في المستقبل؟</div>
+                        <div class="faq__answer">
+                            بالتأكيد! نحن نبني المنصات بطريقة مرنة تسمح بالتطوير والتوسع في المستقبل. يمكنك إضافة مميزات جديدة أو تحديث المنصة في أي وقت.
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="assets/app_logo.png" alt="نمو" width="120">
+                </div>
+                
+                <div class="footer__links">
+                    <h3 class="footer__title">روابط سريعة</h3>
+                    <ul class="footer__menu">
+                        <li><a href="#hero" class="footer__link">عن نمو</a></li>
+                        <li><a href="#app-preview" class="footer__link">مميزاتنا</a></li>
+                        <li><a href="#contact" class="footer__link">تواصل معنا</a></li>
+                        <li><a href="#faq" class="footer__link">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__social">
+                    <h3 class="footer__title">تابعنا</h3>
+                    <div class="footer__social-links">
+                        <a href="https://x.com/nmo_sa2?s=21" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="تويتر">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@nmo.sa1?_t=ZS-8zZJbQ4JiLa&_r=1" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="تيك توك">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 نمو. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+.hero {
+  padding-top: calc(90px + var(--spacing-xxl));
+  padding-bottom: var(--spacing-xl);
+  background: linear-gradient(180deg, #F9F9FF 0%, rgba(249, 249, 255, 0.8) 100%);
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xxl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  width: 100%;
+}
+
+.hero__welcome {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--navy-blue);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy-blue);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards 0.2s;
+  max-width: 700px;
+}
+
+.hero__description {
+  font-size: 1.25rem;
+  color: var(--secondary-purple);
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards 0.4s;
+}
+
+.hero__title .color-primary {
+  color: var(--secondary-blue);
+}
+
+.hero__description .color-secondary {
+  color: var(--secondary-blue);
+}
+
+.btn--hero {
+  background-color: var(--white);
+  color: var(--navy-blue);
+  font-size: 1.125rem;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards 0.6s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.btn--hero:hover {
+  background-color: var(--off-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn--large {
+  min-width: 200px;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s ease forwards 0.4s;
+}
+
+.hero__app-preview {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: calc(80px + var(--spacing-xl));
+  }
+
+  .hero__title {
+    font-size: 2.75rem;
+  }
+  
+  .hero__description {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(70px + var(--spacing-lg));
+  }
+
+  .hero__content {
+    gap: var(--spacing-xl);
+  }
+
+  .hero__title {
+    font-size: 2.25rem;
+  }
+
+  .hero__image {
+    max-width: 320px;
+  }
+}
