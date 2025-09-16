@@ -6,6 +6,13 @@
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <title>نمو</title>
     
+
+    <meta property="og:title" content="نمو">
+    <meta property="og:description" content="نمو يختصر لك شهور!">
+    <meta property="og:image" content="assets/mock-up.png">
+    <meta property="og:url" content="https://www.nmo.services">
+    <meta property="og:type" content="website">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -22,6 +29,7 @@
     <link rel="stylesheet" href="css/main.css">
     
     <!-- Scripts -->
+    <script src="js/lazy-loading.js"></script>
     <script src="js/header.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/faq.js" defer></script>
@@ -37,7 +45,7 @@
                     <span></span>
                 </button>
                 <a href="/" class="nav__logo">
-                    <img src="assets/app_logo.png" alt="نمو" width="120">
+                    <img src="assets/app_logo.png" alt="نمو" width="120" loading="lazy">
                 </a>
                 
                 <div class="nav__mobile-menu">
@@ -80,7 +88,7 @@
                         </a>
                     </div>
                     <div class="hero__image">
-                        <img src="assets/mockk.png" alt="تطبيق نمو" class="hero__app-preview">
+                        <img src="assets/mockk.png" alt="تطبيق نمو" class="hero__app-preview" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -88,7 +96,7 @@
 
         <section id="app-preview" class="app-preview">
             <div class="app-preview__container">
-                <img src="assets/app_logo.png" alt="نمو" class="app-preview__logo">
+                <img src="assets/app_logo.png" alt="نمو" class="app-preview__logo" loading="lazy">
                 <h2 class="app-preview__title">
                     <div class="app-preview__line">
                         <span>نمو</span><span class="color-secondary">لأن</span><span class="color-primary">الوقت</span>
@@ -100,9 +108,9 @@
                 
                 <div class="app-preview__content">
                     <div class="app-preview__cards">
-                        <img src="assets/app-card.png" alt="نمو - بطاقة 1" class="app-preview__card">
-                        <img src="assets/appcard2.png" alt="نمو - بطاقة 2" class="app-preview__card">
-                        <img src="assets/appcard3.png" alt="نمو - بطاقة 3" class="app-preview__card">
+                        <img src="assets/app-card.png" alt="نمو - بطاقة 1" class="app-preview__card" loading="lazy">
+                        <img src="assets/appcard2.png" alt="نمو - بطاقة 2" class="app-preview__card" loading="lazy">
+                        <img src="assets/appcard3.png" alt="نمو - بطاقة 3" class="app-preview__card" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -129,7 +137,7 @@
                 <form class="contact__form" id="contactForm">
                     <div class="form__group">
                         <label class="form__label" for="name">
-                            <img src="icons/user.png" alt="" class="form__label-icon">
+                            <img src="icons/user.png" alt="" class="form__label-icon" loading="lazy">
                             الاسم
                         </label>
                         <input type="text" id="name" class="form__input" placeholder="الاسم الكامل" required>
@@ -137,7 +145,7 @@
                     </div>
                     <div class="form__group">
                         <label class="form__label" for="description">
-                            <img src="icons/start-up.png" alt="" class="form__label-icon">
+                            <img src="icons/start-up.png" alt="" class="form__label-icon" loading="lazy">
                             وصف المشروع
                         </label>
                         <textarea id="description" class="form__input form__textarea" 
@@ -147,7 +155,7 @@
                     <div class="form__row">
                         <div class="form__group">
                             <label class="form__label" for="phone">
-                                <img src="icons/phones.png" alt="" class="form__label-icon">
+                                <img src="icons/phones.png" alt="" class="form__label-icon" loading="lazy">
                                 رقم الجوال
                             </label>
                             <input type="tel" id="phone" class="form__input" placeholder="05xxxxxxxx" required>
@@ -155,7 +163,7 @@
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="email">
-                                <img src="icons/salary.png" alt="" class="form__label-icon">
+                                <img src="icons/salary.png" alt="" class="form__label-icon" loading="lazy">
                                 البريد الإلكتروني
                             </label>
                             <input type="email" id="email" class="form__input" placeholder="email@example.com" required>
@@ -221,7 +229,7 @@
         <div class="footer__container">
             <div class="footer__content">
                 <div class="footer__logo">
-                    <img src="assets/app_logo.png" alt="نمو" width="120">
+                    <img src="assets/app_logo.png" alt="نمو" width="120" loading="lazy">
                 </div>
                 
                 <div class="footer__links">
@@ -231,6 +239,7 @@
                         <li><a href="#app-preview" class="footer__link">مميزاتنا</a></li>
                         <li><a href="#contact" class="footer__link">تواصل معنا</a></li>
                         <li><a href="#faq" class="footer__link">الأسئلة الشائعة</a></li>
+                        <li><a href="policy.html" class="footer__link">السياسات والأحكام</a></li>
                     </ul>
                 </div>
                 

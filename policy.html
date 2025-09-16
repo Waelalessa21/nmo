@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <title>السياسات والأحكام - نمو</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/loading.css">
+    
+    <style>
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--main-bg);
+            color: var(--navy-blue);
+            line-height: 1.6;
+            padding-top: 100px;
+            margin: 0;
+        }
+
+        .policy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xxl);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .policy-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .policy-section {
+            margin-bottom: var(--spacing-xxl);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .policy-section:nth-child(2) { animation-delay: 0.2s; }
+        .policy-section:nth-child(3) { animation-delay: 0.4s; }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--navy-blue);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-content {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--navy-blue);
+        }
+
+        .section-content p {
+            margin-bottom: var(--spacing-md);
+        }
+
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .policy-container {
+                margin: var(--spacing-md);
+                padding: var(--spacing-lg);
+            }
+
+            .policy-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            body {
+                padding-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="القائمة">
+                    <span></span>
+                </button>
+                <a href="/" class="nav__logo">
+                    <img src="assets/app_logo.png" alt="نمو" width="120" loading="lazy">
+                </a>
+                
+                <div class="nav__mobile-menu">
+                    <a href="index.html#features" class="nav__link">عن نمو</a>
+                    <a href="index.html#features" class="nav__link">مميزاتنا</a>
+                    <a href="index.html#faq" class="nav__link">الأسئلة الشائعة</a>
+                </div>
+
+                <ul class="nav__menu">
+                    <li class="nav__item">
+                        <a href="index.html#features" class="nav__link">عن نمو</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#features" class="nav__link">مميزاتنا</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#faq" class="nav__link">الأسئلة الشائعة</a>
+                    </li>
+                </ul>
+                
+                <a href="index.html#contact" class="btn btn--download">ابدأ الآن</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="policy-container">
+            <div class="policy-header">
+                <h1 class="policy-title">السياسات والأحكام</h1>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">سياسة الخصوصية</h2>
+                <div class="section-content">
+                    <p>نحن في نمو نلتزم بحماية خصوصية عملائنا والحفاظ على سرية بياناتهم. تهدف هذه السياسة إلى توضيح كيفية جمع واستخدام وحماية المعلومات الشخصية عند الاستفادة من خدماتنا.</p>
+                    
+                    <h3 style="margin: var(--spacing-lg) 0 var(--spacing-md) 0; font-size: 1.2rem;">1. جمع المعلومات</h3>
+                    <p>نقوم بجمع البيانات التي يقدمها العميل طوعًا مثل الاسم، البريد الإلكتروني، ورقم الجوال عند طلب الخدمة أو التواصل معنا.</p>
+
+                    <h3 style="margin: var(--spacing-lg) 0 var(--spacing-md) 0; font-size: 1.2rem;">2. استخدام المعلومات</h3>
+                    <p>استخدام بيانات العميل لغرض تنفيذ الخدمات المتفق عليها (تصميم/تطوير موقع أو تطبيق).</p>
+                    <p>التواصل مع العميل بشأن تفاصيل المشروع، التحديثات، أو الدعم الفني.</p>
+                    <p>تحسين خدماتنا وتطويرها بشكل مستمر.</p>
+
+                    <h3 style="margin: var(--spacing-lg) 0 var(--spacing-md) 0; font-size: 1.2rem;">3. حماية المعلومات</h3>
+                    <p>نتخذ جميع التدابير الأمنية المعقولة لحماية بيانات العملاء من الوصول غير المصرح به أو التغيير أو الإفصاح.</p>
+                    <p>لا نشارك بيانات العملاء مع أي طرف ثالث إلا في حدود ما يقتضيه تنفيذ الخدمة.</p>
+
+                    <h3 style="margin: var(--spacing-lg) 0 var(--spacing-md) 0; font-size: 1.2rem;">4. حقوق العميل</h3>
+                    <p>يحق للعميل طلب الاطلاع على بياناته المخزنة لدينا وتصحيحها أو حذفها متى ما رغب.</p>
+
+                    <h3 style="margin: var(--spacing-lg) 0 var(--spacing-md) 0; font-size: 1.2rem;">5. التغييرات في السياسة</h3>
+                    <p>نحتفظ بحق تعديل أو تحديث سياسة الخصوصية عند الحاجة، وسيتم إشعار العملاء عند وجود أي تغييرات جوهرية.</p>
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">سياسة الإلغاء والاسترجاع</h2>
+                <div class="section-content">
+                    <p>بما أن خدماتنا رقمية (تطوير مواقع وتطبيقات) ويتم تنفيذها بشكل مخصص لكل عميل، فإن الدفع يتم فقط بعد عرض نموذج أولي يوضح تفاصيل الخدمة.</p>
+                    <p>بعد موافقة العميل على النموذج الأولي وسداد المبلغ، تعتبر جميع المبالغ المدفوعة نهائية وغير قابلة للاسترجاع.</p>
+                    <p>في حال وجود أي خلل فني في الخدمة المقدمة، نلتزم بإصلاحه ومعالجته خلال فترة الضمان المتفق عليها.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="assets/app_logo.png" alt="نمو" width="120" loading="lazy">
+                </div>
+                
+                <div class="footer__links">
+                    <h3 class="footer__title">روابط سريعة</h3>
+                    <ul class="footer__menu">
+                        <li><a href="index.html#hero" class="footer__link">عن نمو</a></li>
+                        <li><a href="index.html#app-preview" class="footer__link">مميزاتنا</a></li>
+                        <li><a href="index.html#contact" class="footer__link">تواصل معنا</a></li>
+                        <li><a href="index.html#faq" class="footer__link">الأسئلة الشائعة</a></li>
+                        <li><a href="policy.html" class="footer__link">السياسات والأحكام</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__social">
+                    <h3 class="footer__title">تابعنا</h3>
+                    <div class="footer__social-links">
+                        <a href="https://x.com/nmo_sa2?s=21" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="تويتر">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@nmo.sa1?_t=ZS-8zZJbQ4JiLa&_r=1" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="تيك توك">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 نمو. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/lazy-loading.js"></script>
+    <script src="js/header.js" defer></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
